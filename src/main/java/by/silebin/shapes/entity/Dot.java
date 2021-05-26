@@ -53,4 +53,13 @@ public class Dot {
         result += Double.hashCode(x) + Double.hashCode(y) + Double.hashCode(z);
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Dot{" +
+                "x=" + x +
+                ", y=" + y +
+                ", z=" + z +
+                '}';
+    }
 }

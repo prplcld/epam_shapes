@@ -17,6 +17,6 @@ public class CubeEvent extends EventObject {
 
     @Override
     public Cube getSource() {
-        return (Cube)super.getSource();
+        return (Cube) super.getSource();
     }
 }

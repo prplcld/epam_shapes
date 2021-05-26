@@ -7,10 +7,16 @@ import by.silebin.shapes.observer.Observer;
 import by.silebin.shapes.service.CubeCalculatorService;
 import by.silebin.shapes.service.impl.CubeCalculatorServiceImpl;
 import by.silebin.shapes.warehouse.Warehouse;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class CubeObserver implements Observer {
+
+    private static final Logger LOGGER = LogManager.getLogger(CubeObserver.class.getName());
+
     @Override
     public void parameterChanged(CubeEvent cubeEvent) {
+        LOGGER.info("parameter changed, calculating new warehouse data");
         Cube cube = cubeEvent.getSource();
         long id = cube.getCubeId();
         //get parameters

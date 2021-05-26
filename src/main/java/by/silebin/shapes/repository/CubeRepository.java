@@ -12,7 +12,7 @@ public class CubeRepository {
 
     private static CubeRepository instance;
 
-    public CubeRepository getInstance() {
+    public static CubeRepository getInstance() {
         if(instance == null){
             instance = new CubeRepository();
         }
